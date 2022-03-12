@@ -15,7 +15,7 @@ code {
 }
 
 body{
-  background: rgb(63,9,63);
+  background: rgba(67, 107, 160, 0.658);
 }
 .notes-page{ 
    width: 100%; 
@@ -39,6 +39,10 @@ a{
 .notes-page header .logo{
   text-transform: uppercase;
   letter-spacing: 2px;
+
+}
+.headnav{
+  background-color: black;
 }
 .notes-page header ul li{
   list-style: none;
@@ -67,7 +71,7 @@ a{
 .card{
   width: 300px;
   box-shadow: 0 0 5px rgb(7,25,63);
-  background: rgb(7,25,63);
+  background: rgba(106, 243, 141, 0.616);
   padding: 10px;
   position: relative;
   color: #ddd;
@@ -93,13 +97,13 @@ a{
 }
 .card .text-wrapper{
   width: 100%;
-  height: 150px;
+  height: 200px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 7;
   overflow: hidden;
   margin: 10px 0;
-  color: #fff9;
+  color: white;
 }
 .card .date{
   text-align: right;
@@ -120,7 +124,7 @@ a{
   max-width: 500px;
   width: 100%;
   margin: auto;
-  border: 10px solid #ccc;
+  border: 10px solid rgb(204, 204, 204);
   padding: 30px;
 }
 .create-note h2{
@@ -155,11 +159,15 @@ a{
   letter-spacing: 2px;
   color: rgb(7,25,63);
 }
-@media (max-width: 500px){
+@media (max-width: 800px){
   .create-note{
     padding: 15px;
     border: 5px solid #ccc;
   } 
+  .login{
+    min-width: 95vw;
+    transform: translate(-50%, -50%);
+  }
 }
 
 /* *********Login / Register******* */
@@ -167,6 +175,10 @@ a{
   position: relative;
   width: 100%;
   min-height: 100vh;
+
+}
+.heading{
+  color: white;
 }
 .login input,
 .register input{
@@ -177,8 +189,10 @@ a{
   position: absolute;
   top: 50%;
   left: 50%;
+  padding: 3%;
   transform: translate(-50%, -50%);
-  background: rgb(63,9,63);
+  border: 5px solid rgba(255, 255, 255, 0.89) ;
+  background: rgb(81, 169, 190);
 }
 .login-page h2,
 .login-page h3{
@@ -196,4 +210,9 @@ a{
 .login-page span:hover{
   color: orange;
   cursor: pointer;
+}
+
+.bld{
+  font-weight: bold;
+  color: white;
 }

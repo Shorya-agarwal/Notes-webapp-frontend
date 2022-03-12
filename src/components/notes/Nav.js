@@ -1,6 +1,6 @@
 import React from 'react'
+// import {Link} from 'react-router-dom'
 import {Link} from 'react-router-dom'
-
 export default function Nav({setIsLogin}) {
 
     const logoutSubmit = () =>{
@@ -9,15 +9,17 @@ export default function Nav({setIsLogin}) {
     }
 
     return (
-        <header>
+        <header className = "headnav">
             <div className="logo">
                 <h1><Link to="/">iNotes</Link></h1>
             </div>
             <ul>
-                <li><Link to="/">Home</Link></li>
+               <li><Link to="/">Home</Link></li>
                 <li><Link to="/create">Create Note</Link></li>
                 <li onClick={logoutSubmit}><Link to="/">Logout</Link></li>
+  
             </ul>
         </header>
+
     )
 }

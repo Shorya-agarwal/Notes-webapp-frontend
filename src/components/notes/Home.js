@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react'
-import {Link} from 'react-router-dom'
 import {format} from 'timeago.js'
 import axios from 'axios'
 
@@ -40,14 +39,14 @@ export default function Home() {
             {
                 notes.map(note =>(
                     <div className="card" key={note._id}>
-                        <h4 title={note.title}>{note.title}</h4>
-                        <div className="text-wrapper">
+                        <h3 className = "bld" title={note.title}>{note.title}</h3>
+                        <div className="text-wrapper bld">
                             <p>{note.content}</p>
                         </div>
-                        <p className="date">{format(note.date)}</p>
-                        <div className="card-footer">
+                        <p className="date">{format(note.createdAt)}</p>
+                        <div className="card-footer bld">
                             {note.name}
-                            <Link to={`edit/${note._id}`} >Edit</Link>
+                            {/* <Link to={`edit/${note._id}`} >Edit</Link> */}
                         </div>
                         <button className="close" 
                         onClick={() => deleteNote(note._id)} >X</button>
